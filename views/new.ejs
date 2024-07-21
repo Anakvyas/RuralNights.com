@@ -1,0 +1,69 @@
+<% layout('./boilerplate/boiler.ejs') -%>
+<!-- form -->
+<div>
+    
+<form action="/listing" method="POST" id="form">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2>CREATE NEW LISTING</h2>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" id ="title" class="form-control" name="listing[title]" placeholder="Enter a catchy title" required/>
+
+            </div>
+        
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+               <textarea name="listing[description]" id ="description" class="form-control" required></textarea>
+
+            </div>
+        
+        
+            <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input type="url"  id = "image" class="form-control" name="listing[image]" placeholder="Enter image URL/LINK"/>
+            </div>
+        
+          <div class="row">
+            <div class="mb-3 col-4">
+                <label for="price" class="form-label">Price</label>
+                <input  id = "price" class="form-control" name="listing[price]" placeholder="1,000" required/>
+
+            </div>
+        
+            <div class="mb-3 col-5">
+                <label for="country" class="form-label">Country</label><br>
+                <input type="text" class="form-control" id = "country" name="listing[country]" placeholder="India" required/>
+
+            </div>
+
+            <div class="mb-3 col-3">
+                <label for="category" class="form-label">Category</label>
+                <select name="listing[category]" id="category" class="form-control">
+                    <option value="rooms">rooms</option>
+                    <option value="mountains">mountains</option>
+                    <option value="rivers">rivers</option>
+                    <option value="beaches">beaches</option>
+                    <option value="farms">farms</option>
+                </select>
+            </div>
+        
+          </div>
+            <div class="mb-3">
+                <label for="Location" class="form-label">Location</label>
+                <input type="text" class="form-control"  id = "Location" name="listing[location]" placeholder="jaipur/Rajasthan" required/>
+
+            </div>
+            <br>
+            <br>
+            <button class="btn-add">ADD</button>
+            
+        </div>
+    </div>
+    
+    <br>
+    <br>
+</form>
+
+</div>
+

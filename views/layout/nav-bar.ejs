@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top">
+    <div class="container-fluid">
+    
+      <a class="navbar-brand" href="#"><i class="fa-regular fa-compass" style="color: #e63d3d;"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+       
+          <a class="nav-link" href="/listing">Explore</a>
+        </div>
+      </div>
+     
+      <div class="search">
+        <form class="d-flex" role="search" action="/listing/search" method="POST">
+          <input class="form-control me-2" type="search" placeholder="Search destination" aria-label="Search" name='s'>
+          <button class="btn btn-outline-danger" type="submit">Search</button>
+        </form>
+  
+      </div>
+
+
+      <a class="nav-link me-4" href="/listing/new">Add New Listing</a>
+
+        <%- include('user.ejs')%>
+   
+    </div>
+  </nav>

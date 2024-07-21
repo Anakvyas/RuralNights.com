@@ -1,0 +1,73 @@
+<% layout('./boilerplate/boiler.ejs') -%>
+ <div class="iconsss mt-3 mb-2">
+
+    <a href="/listing/all/beaches">
+      <div class="ico beaches">
+
+        <img src="https://tse3.mm.bing.net/th?id=OIP.jTR22bjRkGTEqp0eKj0YRwHaFm&pid=Api&P=0&h=180" alt="">
+        <p>beaches</p>
+        <div class="bars">.</div>
+      </div>
+    </a>
+
+    <a href="/listing/all/mountains">
+      <div class="ico mountainns">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.YoEvaISE4SBb3tIw9jXt9wHaHa&pid=Api&P=0&h=180" alt="">
+        <p>mountains</p>
+        <div class="bars">.</div>
+      </div>
+  
+    </a>
+
+    <a href="/listing/all/rooms">
+      <div class="ico rooms">
+        <img src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg" alt="" height="70px;">
+          <p>rooms</p>
+         <div class="bars">.</div>
+      </div>
+    </a>
+
+   <a href="/listing/all/rivers">
+    <div class="ico rivers">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.idJMsQuKLNFpPB2gHbjjJAAAAA&pid=Api&P=0&h=180" alt="">
+      <p>rivers</p>
+      <div class="bars">.</div>
+    </div>
+   </a>
+
+
+
+   <a href="/listing/all/farms">
+    <div class="ico farm">
+      <img src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" alt="">
+     <p>farms</p>    
+     <div class="bars">.</div>
+   
+   </a>
+  </div>
+
+ </div>
+
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+
+      <%for(let list of listings){%>
+      
+        <a href="/listing/<%=list._id %>" id="listing-card">
+          <div class="card col" style="width: 26rem;">
+            <img src=<%=list.image%> class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+            <div class="card-body">
+              <p class="card-text">
+                <b>
+                  <%=list.title %>
+                </b>
+                <br>
+                &#8377 <%= list.price.toLocaleString('en-IN')%>/night
+              </p>
+            </div>
+          </div>
+        </a>
+      
+        <% } %>
+  </div>
+
